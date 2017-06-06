@@ -2,6 +2,37 @@
 Changelog for package gazebo_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.7.2 (2017-05-21)
+------------------
+* Revert gazebo8 changes in Lunar and back to use gazebo7 (`#583 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/583>`_)
+* Contributors: Jose Luis Rivero
+
+2.7.1 (2017-04-28)
+------------------
+* Fixes for compilation and warnings in Lunar-devel  (`#573 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/573>`_)
+  Multiple fixes for compilation and warnings coming from Gazebo8 and ignition-math3
+* Add an IMU sensor plugin that inherits from SensorPlugin (`#363 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/363>`_)
+* Less exciting console output (`#561 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/561>`_)
+* Add catkin package(s) to provide the default version of Gazebo - take II (kinetic-devel) (`#571 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/571>`_)
+* Contributors: Alessandro Settimi, Dave Coleman, Jose Luis Rivero
+
+2.5.12 (2017-04-25)
+-------------------
+* Revert catkin warning fix (`#567 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/567>`_)
+  Many regressions in third party software (see https://github.com/yujinrobot/kobuki_desktop/issues/50)
+* Contributors: Jose Luis Rivero
+
+2.5.11 (2017-04-18)
+-------------------
+* Change build system to set DEPEND on Gazebo/SDFormat (fix catkin warning)
+  Added missing DEPEND clauses to catkin_package to fix gazebo catkin warning.
+  Note that after the change problems could appear related to -lpthreads
+  errors. This is an known issue related to catkin:
+  https://github.com/ros/catkin/issues/856
+
+* Fix: add gazebo_ros_range to catkin package libraries (`#558 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/558>`_)
+* Contributors: Christoph Rist, Dave Coleman
+
 2.5.10 (2017-03-03)
 -------------------
 * Revert catkin warnings to fix regressions (problems with catkin -lpthreads errors)
