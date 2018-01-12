@@ -2,6 +2,55 @@
 Changelog for package gazebo_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.14 (2017-12-11)
+-------------------
+* for gazebo8+, call functions without Get (`#639 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/639>`_)
+* Fix gazebo8 warnings part 4: convert remaining local variables in plugins to ign-math (`#633 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/633>`_)
+* Fix gazebo8 warnings part 3: more ign-math in plugins (`#631 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/631>`_)
+* Fix gazebo8 warnings part 2: replace private member gazebo::math types with ignition (`#628 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/628>`_)
+* Replace Events::Disconnect* with pointer reset (`#623 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/623>`_)
+* Merge pull request `#542 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/542>`_ from davetcoleman/kinetic-gazebo7-only
+  Remove compiler directive flags for < GAZEBO 7
+* Contributors: Dave Coleman, Steven Peters
+
+2.5.13 (2017-06-24)
+-------------------
+* Fix inverted height in block laser plugin (`#582 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/582>`_)
+* Allow disabling distorted camera border crop (and associated tests) (`#572 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/572>`_)
+* Add an IMU sensor plugin that inherits from SensorPlugin (`#363 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/363>`_)
+  * now the plugin works with multiple robots
+  * using GetParentName name instead of GetScopedName
+  * added comments to highlight the differents between GazeboRosImuSensor and GazeboRosIMU
+  * now the message header is properly handled, using bodyName parameter as frame_id
+  * added check on gazebo version
+  * added check for sensor null pointer
+  * changed deprecated functions for gazebo version >= 6
+  * fixed version check
+  * added missing sensor variable for LastUpdateTime() function call
+  * considering '/' included in the robotNamespace
+  * replaced "bodyFrame" with "frameName"
+* Less exciting console output (`#561 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/561>`_)
+* Add catkin package(s) to provide the default version of Gazebo (`#571 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/571>`_)
+  * gazebo_dev: added execution dependency gazebo
+* Contributors: Adam Allevato, Alessandro Settimi, Dave Coleman, Jose Luis Rivero, Shohei Fujii
+
+2.5.12 (2017-04-25)
+-------------------
+* Revert catkin warning fix (`#567 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/567>`_)
+  Many regressions in third party software (see https://github.com/yujinrobot/kobuki_desktop/issues/50)
+* Contributors: Jose Luis Rivero
+
+2.5.11 (2017-04-18)
+-------------------
+* Change build system to set DEPEND on Gazebo/SDFormat (fix catkin warning)
+  Added missing DEPEND clauses to catkin_package to fix gazebo catkin warning.
+  Note that after the change problems could appear related to -lpthreads
+  errors. This is an known issue related to catkin:
+  https://github.com/ros/catkin/issues/856
+
+* Fix: add gazebo_ros_range to catkin package libraries (`#558 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/558>`_)
+* Contributors: Christoph Rist, Dave Coleman
+
 2.5.10 (2017-03-03)
 -------------------
 * Revert catkin warnings to fix regressions (problems with catkin -lpthreads errors)
