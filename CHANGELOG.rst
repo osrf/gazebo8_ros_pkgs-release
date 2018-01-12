@@ -2,6 +2,23 @@
 Changelog for package gazebo_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.14 (2017-12-11)
+-------------------
+
+2.5.13 (2017-06-24)
+-------------------
+* Add catkin package(s) to provide the default version of Gazebo (`#571 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/571>`_)
+  * Added catkin package gazebo_dev which provides the cmake config of the installed Gazebo version
+* Contributors: Jose Luis Rivero
+
+2.5.12 (2017-04-25)
+-------------------
+
+2.5.11 (2017-04-18)
+-------------------
+* Changed the spawn model methods to spawn also lights. (`#511 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/511>`_)
+* Contributors: Alessandro Ambrosano
+
 2.5.10 (2017-03-03)
 -------------------
 
