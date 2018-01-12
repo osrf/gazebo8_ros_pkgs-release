@@ -2,6 +2,34 @@
 Changelog for package gazebo_ros_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.5.14 (2017-12-11)
+-------------------
+* Replace Events::Disconnect* with pointer reset (`#623 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/623>`_)
+* Contributors: Steven Peters
+
+2.5.13 (2017-06-24)
+-------------------
+* Less exciting console output (`#561 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/561>`_)
+* Add catkin package(s) to provide the default version of Gazebo (`#571 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/571>`_)
+  * Added catkin package gazebo_dev which provides the cmake config of the installed Gazebo version
+* Contributors: Dave Coleman, Jose Luis Rivero
+
+2.5.12 (2017-04-25)
+-------------------
+* Fixed broken gazebo_ros_control tutorial link (`#566 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/566>`_)
+* Contributors: Ian McMahon
+
+2.5.11 (2017-04-18)
+-------------------
+* Change build system to set DEPEND on Gazebo/SDFormat (fix catkin warning)
+  Added missing DEPEND clauses to catkin_package to fix gazebo catkin warning. Note that after the change problems could appear related to -lpthreads errors. This is an known issue related to catkin: https://github.com/ros/catkin/issues/856.
+* Make gazebo_ros_control compatible with ros_control with respect to <hardwareInterface> tag (`#550 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/550>`_)
+  * ros_control expects "<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>", i.e. "hardware_interface/" prefix
+  * add deprecation warning
+  * improve warning
+  * fix warning message fix
+* Contributors: Andreas Bihlmaier, Dave Coleman
+
 2.5.10 (2017-03-03)
 -------------------
 * Revert catkin warnings to fix regressions (problems with catkin -lpthreads errors)
