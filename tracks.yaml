@@ -124,7 +124,7 @@ tracks:
       :{release_inc}
     devel_branch: kinetic-devel
     last_version: 2.5.10
-    name: gazebo_ros_pkgs
+    name: gazebo8_ros_pkgs
     patches: null
     release_inc: '1'
     release_repo_url: null
