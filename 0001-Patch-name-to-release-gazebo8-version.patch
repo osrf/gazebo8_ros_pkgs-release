@@ -1,4 +1,4 @@
-From 9c3ff6dffc1e063bdb8b49d823e34202bf97d1c7 Mon Sep 17 00:00:00 2001
+From f14ca5eb33f83b4cab1a35624913a600986edb61 Mon Sep 17 00:00:00 2001
 From: Jose Luis Rivero <jrivero@osrfoundation.org>
 Date: Wed, 22 Mar 2017 19:47:02 +0100
 Subject: [PATCH 1/2] Patch name to release gazebo8 version
