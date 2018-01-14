@@ -9,6 +9,7 @@ Standards-Version: 3.9.2
 Package: @(Package.replace('gazebo-','gazebo8-'))
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, @(', '.join(Depends))
+Conflicts: @(Package), @(Package.replace('gazebo-','gazebo6-')), @(Package.replace('gazebo-','gazebo7-'))
 Conflicts: @(Package)
 @[if Conflicts]Conflicts: @(', '.join(Conflicts))@\n@[end if]@
 @[if Replaces]Replaces: @(', '.join(Replaces))@\n@[end if]@
