@@ -1,0 +1,13 @@
+Source: ros-lunar-gazebo-ros-pkgs
+Section: misc
+Priority: extra
+Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin
+Homepage: http://gazebosim.org/tutorials?cat=connect_ros
+Standards-Version: 3.9.2
+
+Package: ros-lunar-gazebo8-ros-pkgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-gazebo8-dev, ros-lunar-gazebo8-msgs, ros-lunar-gazebo8-plugins, ros-lunar-gazebo8-ros
+Conflicts: ros-lunar-gazebo-ros-pkgs
+Description: Interface for using ROS with the Gazebo simulator.
