@@ -2,6 +2,18 @@
 Changelog for package gazebo_dev
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.7.6 (2018-06-07)
+------------------
+
+2.7.5 (2018-06-04)
+------------------
+
+2.7.4 (2018-02-12)
+------------------
+
+2.7.3 (2017-12-11)
+------------------
+
 2.7.2 (2017-05-21)
 ------------------
 * Revert gazebo8 changes in Lunar and back to use gazebo7 (`#583 <https://github.com/ros-simulation/gazebo_ros_pkgs/issues/583>`_)
