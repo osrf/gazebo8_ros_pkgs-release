@@ -1,4 +1,4 @@
-From f5e9f777f479af33e28804ff913627f404c9fe55 Mon Sep 17 00:00:00 2001
+From c951895fd04941af18322157f9890c15970eec55 Mon Sep 17 00:00:00 2001
 From: Jose Luis Rivero <jrivero@osrfoundation.org>
 Date: Wed, 7 Jun 2017 00:24:02 +0200
 Subject: [PATCH] Use gazebo8 instead of gazebo8 in package.xml
