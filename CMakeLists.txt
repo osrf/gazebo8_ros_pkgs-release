@@ -81,6 +81,10 @@ set_target_properties(gazebo_ros_paths_plugin PROPERTIES COMPILE_FLAGS "${cxx_fl
 set_target_properties(gazebo_ros_paths_plugin PROPERTIES LINK_FLAGS "${ld_flags}")
 target_link_libraries(gazebo_ros_paths_plugin ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
+## Tests
+
+add_subdirectory(test)
+
 # Install Gazebo System Plugins
 install(TARGETS gazebo_ros_api_plugin gazebo_ros_paths_plugin
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
@@ -93,10 +97,14 @@ install(PROGRAMS scripts/gazebo
 		 scripts/gzserver
 		 scripts/gdbrun
 		 scripts/perf
-		 scripts/spawn_model
 		 scripts/libcommon.sh
         DESTINATION
                  ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+# This one is a Python program, not a shell script, so install it separately
+catkin_install_python(PROGRAMS scripts/spawn_model
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 # Install Gazebo launch files
